@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --very-light-pink: #C7C7C7;
+            --white: #FFFFFF;
+            --text-input-field: #F7F7F7;
+            --black: #000000;
+            --hospital-green: #ACD9B2;
+            --dark: #232830;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        main{
+            
+            position: relative;
+        }
+
+
+        .menu-container{
+            margin: 0 50px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .menu-container img{
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            width: 25px;
+        }
+        
+        .menu-container ul{
+            margin: 25px 0;
+            list-style: none;
+        }
+
+
+        .menu-container li{
+            margin: 20px 0;
+        }
+
+        .menu-container a{
+            text-decoration: none;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .menu-container h1{
+            margin-top: 50px;
+            font-size: 20px;
+        }
+
+
+        .menu-container .signOut a{
+            text-decoration: none;
+            font-weight: bolder;
+            color: var(--hospital-green);
+        }
+
+        .menu-container ul.signOut{
+        position: absolute;
+        bottom: 0;
+        }
+
+        .separator{
+            width: 100%;
+            border-bottom: 1px solid var(--very-light-pink);
+            max-width: 300px;
+            height: 1px;
+        }
+
+
+    </style>
+</head>
+<body>
+<main>
+    <div class="menu-container">
+        <div>
+            <img src="/Práctica Yale Store/icons/icon_close.png" alt="Exit">
+            <h1>CATEGORIES</h1>
+        </div>
+        <ul>
+            <li><a href="/">All</a></li>
+            <li><a href="/">Clothes</a></li>
+            <li><a href="/">Electronics</a></li>
+            <li><a href="/">Furnitures</a></li>
+            <li><a href="/">Toys</a></li>
+            <li><a href="/">Others</a></li>
+        </ul>
+        <div class="separator"></div>
+        <ul>
+            <li><a href="/">My orders</a></li>
+            <li><a href="/">My account</a></li>
+        </ul>
+        <ul class="signOut">
+            <li><label for="">camilayakoo@gmail.com</label></li>
+            <li><a href="/">Sign out</a></li>
+        </ul>
+    </div>
+</main>
+</body>
+<script src="https://kit.fontawesome.com/2d6ec5607d.js" crossorigin="anonymous"></script>
+</html>

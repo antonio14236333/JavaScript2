@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --very-light-pink: #C7C7C7;
+            --white: #FFFFFF;
+            --text-input-field: #F7F7F7;
+            --black: #000000;
+            --hospital-green: #ACD9B2;
+            --dark: #232830;
+        }
+
+        *{
+            margin: 0;
+        }
+
+        header{
+            display: flex;
+            align-items: center;
+            height: 8vh;
+            width: 100vw;
+            box-shadow: 2px 2px 2px 0px var(--very-light-pink);
+        }
+
+        nav{
+            display: flex;
+            padding: 0 20px;
+            width: 100vw;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login{
+            padding-top: 6vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: start;
+            height: 86vh;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .login h1{
+            font-size: 18px;
+            margin-bottom: 50px;
+            align-self: flex-start;
+        }
+
+        .login label{
+            margin-bottom: 4px;
+        }
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 12px;
+            font-weight: bolder;
+        }
+
+        .form input{
+            border-radius: 8px;
+            padding: 8px;
+            max-width: 400px;
+            width: 88vw;
+            border: none;
+            background-color: var(--text-input-field);
+            margin-bottom: 28px;
+        }
+
+        .form input.btn{
+            position: absolute;
+            bottom: 0;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            height: 55px;
+            width: 100%;
+            max-width: 416px;
+            background-color: var(--hospital-green);
+            color: var(--white);
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <img src="/Práctica Yale Store/icons/icon_menu.svg" alt="">
+                <img src="/Práctica Yale Store/logo_yard_sale.svg" alt="">
+                <img src="/Práctica Yale Store/icons/icon_shopping_cart_notification.svg" alt="">
+            </nav>
+        </header>
+        <div class="login">
+            <h1>My account</h1>
+            <form action="" class="form">
+                <label for="">Name</label>
+                <input type="text" placeholder="Camila Yokoo">
+                <label for="">Email</label>
+                <input type="email" placeholder="camilayokoo@gmail.com">
+                <label for="">Re-enter password</label>
+                <input type="password" placeholder="*********">
+                <input type="submit" value="Create account" class="btn">
+            </form>
+        </div>
+    </main>
+</body>
+</html>

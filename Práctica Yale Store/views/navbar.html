@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --very-light-pink: #C7C7C7;
+            --white: #FFFFFF;
+            --text-input-field: #F7F7F7;
+            --black: #000000;
+            --hospital-green: #ACD9B2;
+            --dark: #232830;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            display: flex;
+            align-items: center;
+            height: 8vh;
+            width: 100vw;
+            box-shadow: 2px 2px 2px 0px var(--very-light-pink);
+        }
+
+        nav{
+            display: flex;
+            padding: 0 20px;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 90vw;
+            max-width: 500px;
+        }
+
+        .input-wrapper{
+            position: relative;
+        }
+
+        .input-wrapper i{
+            color: var(--very-light-pink);
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 12px;
+            top: 53%;
+            transform: translateY(-50%);
+        }
+
+        .search{
+            width: 100%;
+            margin: 15px 0;
+            height: 25px;
+            background-color: var(--text-input-field);
+            color: var(--very-light-pink);
+            border: none;
+            border-radius: 8px;
+            padding: 8px;
+            font-size: 12px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+        }
+
+        .categories ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style: none;
+            width: 100%;
+            margin-bottom: 20px;
+            align-items: baseline;
+        }
+
+        .categories li.active{
+            border: var(--hospital-green) 1px solid;
+            padding: 1px 8px;
+            border-radius: 5px;
+        }
+
+        .categories li.active a{
+            color: var(--hospital-green);
+        }
+
+        .categories a{
+            font-family: 'Quicksand', sans-serif;
+            color: var(--very-light-pink);
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .categories{
+            padding: 0;
+        }
+
+        .class{
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        select{
+            width: 25%;
+            font-family: 'Quicksand', sans-serif;
+            border: none;
+            background: transparent;
+            font-weight: bold;
+            font-size: 12px;
+            color: var(--very-light-pink);
+        }
+
+        .class span{
+            font-family: 'Quicksand', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .container-products{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .product{
+            margin: 15px;
+            display: flex;
+            flex-direction: column;
+            width: 120px;
+            height: 200px;
+        }
+
+        .product img{
+            width: 100%;
+            height: 120px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .product .downSide{
+            width: 120px;
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+
+
+        .product .icon img{
+            height: 35px;
+        }
+
+        .product .icon{
+            height: 35px;
+            margin: 0;
+            position: absolute;
+            right: 0;
+        }
+
+        .product .description{
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            justify-content: center;
+            width: 115px;
+        }
+
+        .product .description .price{
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .product .description .title{
+            font-size: 12px;
+            color: var(--very-light-pink);
+            font-weight: 500;
+        }
+
+        .superior{
+            width: 1000px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media (max-width: 640px){
+            main{
+                background-color: red;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="/Práctica Yale Store/icons/icon_menu.svg" alt="">
+            <img src="/Práctica Yale Store/logo_yard_sale.svg" alt="">
+            <img src="/Práctica Yale Store/icons/icon_shopping_cart_notification.svg" alt="">
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="superior">
+                <div class="input-wrapper">
+                    <input type="text" class="search" placeholder="&nbsp; &nbsp; &nbsp; &nbsp; Search product">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    
+                </div>
+                <div class="class">
+                    <span>Order:&nbsp;&nbsp;</span>
+                    <select name="" id="">
+                        <option value="">Most recent</option>
+                        <option value="">Most cheapest</option>
+                        <option value="">Most expensivest</option>
+                    </select>
+                </div>
+            </div>
+
+            <nav class="categories">
+                <ul>
+                    <li class="active"><a href="">All</a></li>
+                    <li><a href="">Clothes</a></li>
+                    <li><a href="">Electronics</a></li>
+                    <li><a href="">Furniture</a></li>
+                    <li><a href="">Toys</a></li>
+                </ul>
+            </nav>
+
+            <div class="container-products">
+                <div class="product">
+                    <img src="https://i.pinimg.com/564x/ec/3c/a6/ec3ca6faf7830352aa6a2135617d45ab.jpg" alt="">
+                    <div class="downSide">
+                        <div class="description">
+                            <span class="price">$ 6999</span>
+                            <span class="title">Xbox</span>
+                        </div>
+                        <div class="icon">
+                            <img src="/Práctica Yale Store/icons/bt_add_to_cart.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://i.pinimg.com/564x/ec/3c/a6/ec3ca6faf7830352aa6a2135617d45ab.jpg" alt="">
+                    <div class="downSide">
+                        <div class="description">
+                            <span class="price">$ 6999</span>
+                            <span class="title">Xbox</span>
+                        </div>
+                        <div class="icon">
+                            <img src="/Práctica Yale Store/icons/bt_add_to_cart.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://i.pinimg.com/564x/ec/3c/a6/ec3ca6faf7830352aa6a2135617d45ab.jpg" alt="">
+                    <div class="downSide">
+                        <div class="description">
+                            <span class="price">$ 6999</span>
+                            <span class="title">Xbox</span>
+                        </div>
+                        <div class="icon">
+                            <img src="/Práctica Yale Store/icons/bt_add_to_cart.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://i.pinimg.com/564x/ec/3c/a6/ec3ca6faf7830352aa6a2135617d45ab.jpg" alt="">
+                    <div class="downSide">
+                        <div class="description">
+                            <span class="price">$ 6999</span>
+                            <span class="title">Xbox</span>
+                        </div>
+                        <div class="icon">
+                            <img src="/Práctica Yale Store/icons/bt_add_to_cart.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://i.pinimg.com/564x/ec/3c/a6/ec3ca6faf7830352aa6a2135617d45ab.jpg" alt="">
+                    <div class="downSide">
+                        <div class="description">
+                            <span class="price">$ 6999</span>
+                            <span class="title">Xbox</span>
+                        </div>
+                        <div class="icon">
+                            <img src="/Práctica Yale Store/icons/bt_add_to_cart.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://i.pinimg.com/564x/ec/3c/a6/ec3ca6faf7830352aa6a2135617d45ab.jpg" alt="">
+                    <div class="downSide">
+                        <div class="description">
+                            <span class="price">$ 6999</span>
+                            <span class="title">Xbox</span>
+                        </div>
+                        <div class="icon">
+                            <img src="/Práctica Yale Store/icons/bt_add_to_cart.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/2d6ec5607d.js" crossorigin="anonymous"></script>
+</body>
+</html>

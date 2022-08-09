@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --very-light-pink: #C7C7C7;
+            --white: #FFFFFF;
+            --text-input-field: #F7F7F7;
+            --black: #000000;
+            --hospital-green: #ACD9B2;
+            --dark: #232830;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: aqua;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-desktop{
+            display: flex;
+            background-color: var(--white);
+            border: 1px solid var(--very-light-pink);
+            border-radius: 5px;
+        }
+
+        .menu-desktop ul{
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            list-style: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        .menu-desktop ul li{
+            padding: 8px 0;
+        }
+
+        .menu-desktop ul li a{
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            
+        }
+
+        .separator{
+            width: 100%;
+            border-top: 1px solid var(--very-light-pink);
+        }
+
+        .menu-desktop li a.signOut{
+            color: #ACD9B2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="menu-desktop">
+        <ul>
+            <li><a href="">My orders</a></li>
+            <li><a href="">My account</a></li>
+            <div class="separator"></div>
+            <li><a href="" class="signOut">Sign out</a></li>
+        </ul>
+
+    </div>
+
+</body>
+<script src="https://kit.fontawesome.com/2d6ec5607d.js" crossorigin="anonymous"></script>
+</html>

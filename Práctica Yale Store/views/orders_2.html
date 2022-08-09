@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --very-light-pink: #C7C7C7;
+            --white: #FFFFFF;
+            --text-input-field: #F7F7F7;
+            --black: #000000;
+            --hospital-green: #ACD9B2;
+            --dark: #232830;
+        }
+
+        *{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        header{
+            display: flex;
+            align-items: center;
+            height: 8vh;
+            width: 100vw;
+            box-shadow: 2px 2px 2px 0px var(--very-light-pink);
+        }
+
+        nav{
+            display: flex;
+            padding: 0 20px;
+            width: 100vw;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-orders{
+            width: 90%;
+            max-width: 600px;
+
+        }
+
+        .total{
+            font-size: 12px;
+            position: relative;
+            padding: 15px;
+            border-radius: 5px;
+            height: 30px;
+            align-items: center;
+        }
+
+        .total .date{
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .total .articles{
+            font-weight: 500;
+            margin-top: 5px;
+            font-size: 10px;
+            color: var(--very-light-pink);
+        }
+
+        .total .price{
+            font-weight: bold;
+            position: absolute;
+            right: 5%;
+            top: 35%;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .total img{
+            position: absolute;
+            right: 0;
+            top: 38%;
+
+        }
+
+        .order{
+            margin: 20px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+        }
+
+        .order img{
+            width: 60px;
+            height: 60px;
+            border-radius: 20px;
+        }
+
+
+        .order .name{
+            
+            font-weight: 500;
+            font-size: 12px;
+            color: var(--very-light-pink);
+            margin-left: 15px;
+        }
+
+        .order .price{
+            font-weight: bold;
+            font-size: 12px;
+            position: absolute;
+            right: 0;
+        }
+
+        div.total:first-child{
+            margin-top: 25px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="/Práctica Yale Store/icons/icon_menu.svg" alt="">
+            <h1>My orders</h1>
+            <img src="/Práctica Yale Store/icons/icon_shopping_cart_notification.svg" alt="">
+        </nav>
+    </header>
+    <main>
+        <div class="container-orders">
+            <div class="orders">
+                <div class="total">
+                    <p class="date">06.22.2022</p>
+                    <p class="articles">6 articles</p>
+                    <p class="price">$ 120,00</p>
+                    <img src="/Práctica Yale Store/icons/flechita.svg" alt="">
+                </div>
+                <div class="total">
+                    <p class="date">06.22.2022</p>
+                    <p class="articles">6 articles</p>
+                    <p class="price">$ 120,00</p>
+                    <img src="/Práctica Yale Store/icons/flechita.svg" alt="">
+                </div>
+                <div class="total">
+                    <p class="date">06.22.2022</p>
+                    <p class="articles">6 articles</p>
+                    <p class="price">$ 120,00</p>
+                    <img src="/Práctica Yale Store/icons/flechita.svg" alt="">
+                </div>
+                <div class="total">
+                    <p class="date">06.22.2022</p>
+                    <p class="articles">6 articles</p>
+                    <p class="price">$ 120,00</p>
+                    <img src="/Práctica Yale Store/icons/flechita.svg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>
